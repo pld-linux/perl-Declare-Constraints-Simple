@@ -26,6 +26,8 @@ BuildRequires:	perl-Class-Inspector
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
+%define		_noautoreq	perl(Declare::Constraints::Simple-Library)
+
 %description
 The main purpose of this module is to provide an easy way to build a
 profile to validate a data structure. It does this by giving you a set
