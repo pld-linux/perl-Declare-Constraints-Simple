@@ -9,7 +9,7 @@ Summary:	Declare::Constraints::Simple - Declarative Validation of Data Structure
 Summary(pl.UTF-8):	Declare::Constraints::Simple - deklaratywna walidacja struktur danych
 Name:		perl-Declare-Constraints-Simple
 Version:	0.03
-Release:	2
+Release:	3
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -61,6 +61,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
+%dir %{perl_vendorlib}/Declare
 %dir %{perl_vendorlib}/Declare/Constraints
 %{perl_vendorlib}/Declare/Constraints/*.pm
 %{perl_vendorlib}/Declare/Constraints/Simple
