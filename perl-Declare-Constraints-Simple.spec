@@ -6,22 +6,22 @@
 %define	pdir	Declare
 %define	pnam	Constraints-Simple
 Summary:	Declare::Constraints::Simple - Declarative Validation of Data Structures
-Summary(pl.UTF-8):	Declare::Constraints::Simple - deklaratywna walidacja struktur danych
+Summary(pl.UTF-8):	Declare::Constraints::Simple - deklaratywne sprawdzanie poprawności struktur danych
 Name:		perl-Declare-Constraints-Simple
 Version:	0.03
 Release:	3
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://search.cpan.org/CPAN/authors/id/P/PH/PHAYLON/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-authors/id/P/PH/PHAYLON/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	abcd5e9f2dd034deed975601b38d684e
 URL:		http://search.cpan.org/dist/Declare-Constraints-Simple/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
-BuildRequires:	perl(aliased)
 BuildRequires:	perl-Carp-Clan
 BuildRequires:	perl-Class-Inspector
+BuildRequires:	perl-aliased
 %endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -33,11 +33,11 @@ The main purpose of this module is to provide an easy way to build a
 profile to validate a data structure. It does this by giving you a set
 of declarative keywords in the importing namespace.
 
-
-
 %description -l pl.UTF-8
 Głównym celem tego modułu jest dostarczenie prostego sposobu budowania
-profili służących do walidacji sktryktur danych.
+profili służących do sprawdzania poprawności sktruktur danych.
+Zapewnia to udostępniając zbiór deklaratywnych słów kluczowych w
+importowanej przestrzeni nazw.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
@@ -63,6 +63,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc Changes README
 %dir %{perl_vendorlib}/Declare
 %dir %{perl_vendorlib}/Declare/Constraints
-%{perl_vendorlib}/Declare/Constraints/*.pm
+%{perl_vendorlib}/Declare/Constraints/Simple.pm
 %{perl_vendorlib}/Declare/Constraints/Simple
-%{_mandir}/man3/*
+%{_mandir}/man3/Declare::Constraints::Simple*.3pm*
