@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without	tests		# do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define	pdir	Declare
 %define	pnam	Constraints-Simple
 Summary:	Declare::Constraints::Simple - Declarative Validation of Data Structures
